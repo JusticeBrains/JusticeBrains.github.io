@@ -9,6 +9,10 @@
     --error-color: #d9534f;
 }
 
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
 
 /*Navbar*/
 .navbar {
