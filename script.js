@@ -33,12 +33,8 @@ const applyTheme = (pinnedTheme) => {
   const effectiveTheme = pinnedTheme ?? getSystemTheme();
   if (themeToggleBtn) {
     const nextTheme = effectiveTheme === 'dark' ? 'light' : 'dark';
-    const labelEl = themeToggleBtn.querySelector('.theme-toggle-label');
     themeToggleBtn.setAttribute('aria-label', `Switch to ${nextTheme} theme`);
     themeToggleBtn.setAttribute('title', `Switch to ${nextTheme} theme`);
-    if (labelEl) {
-      labelEl.textContent = nextTheme === 'dark' ? 'Dark' : 'Light';
-    }
   }
 };
 

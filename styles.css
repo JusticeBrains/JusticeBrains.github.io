@@ -579,21 +579,16 @@
   }
 
   .icon-btn {
-    padding-inline: 0.65rem;
-    border-color: var(--border);
-    background-color: var(--bg-surface);
+    padding: 0.45rem;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
     color: var(--ink-secondary);
   }
 
   .icon-btn:hover:not(:disabled) {
-    border-color: var(--border-strong);
-    color: var(--ink-primary);
-    background-color: var(--bg-elevated);
-  }
-
-  .theme-toggle-label {
-    font-size: 0.82rem;
-    font-family: var(--font-mono);
+    background-color: transparent;
+    color: var(--accent);
   }
 
   .icon-sun,
@@ -1354,10 +1349,6 @@
   @media (max-width: 52rem) {
     .mobile-menu-btn {
       display: inline-flex;
-    }
-
-    .theme-toggle-label {
-      display: none;
     }
 
     .primary-nav {
