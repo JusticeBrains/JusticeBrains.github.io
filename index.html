@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Justice Duodu — Backend Software Engineer</title>
+  <meta
+    name="description"
+    content="Portfolio of Justice Duodu, Backend Software Engineer in Accra, Ghana with 3+ years of experience building Python APIs, PostgreSQL systems, Celery/Redis pipelines, and containerized Linux deployments."
+  >
+  <meta property="og:title" content="Justice Duodu — Backend Software Engineer">
+  <meta
+    property="og:description"
+    content="Backend engineer with 3+ years of experience building Python APIs and database-heavy systems for HR, payroll, and finance."
+  >
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+
+  <!-- Synchronous inline script before styles to apply a pinned color-scheme without FOUC -->
+  <script>
+    {
+      try {
+        const storedScheme = localStorage.getItem('color-scheme');
+        if (storedScheme === 'light' || storedScheme === 'dark') {
+          const meta = document.querySelector('meta[name="color-scheme"]');
+          if (meta) meta.content = storedScheme;
+          document.documentElement.classList.add(`theme-${storedScheme}`);
+        }
+      } catch {
+        /* Ignore storage access errors in restricted browsing contexts */
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Justice Duodu — Home">
+        <span class="brand-mark" aria-hidden="true">JD</span>
+        <span class="brand-text">
+          <span class="brand-name">Justice Duodu</span>
+          <span class="brand-role">Backend Software Engineer</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#focus">Capabilities</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          type="button"
+          class="icon-btn"
+          id="theme-toggle"
+          aria-label="Switch color theme"
+          title="Toggle light/dark theme"
+        >
+          <svg class="icon icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <span class="theme-toggle-label">Theme</span>
+        </button>
+
+        <button type="button" class="btn btn-secondary btn-sm" data-open-dialog="cv-dialog">
+          CV Summary
+        </button>
+
+        <button
+          type="button"
+          class="icon-btn mobile-menu-btn"
+          id="mobile-menu-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Toggle navigation menu"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <!-- Hero Section -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span>
+            Accra, Ghana &middot; Python, PostgreSQL &amp; Production Systems
+          </p>
+
+          <h1 id="hero-title" class="hero-title">Justice Duodu</h1>
+
+          <p class="hero-subtitle">Backend Software Engineer</p>
+
+          <p class="hero-lead">
+            Backend engineer with 3+ years of experience building Python APIs and database-heavy
+            systems for HR, payroll, and finance. Comfortable owning the full backend lifecycle,
+            from PostgreSQL schema design and query tuning to Celery background jobs and Docker
+            deployments on Linux. Used to working directly with frontend developers and business
+            teams to ship reliable software.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#experience">View Experience</a>
+            <a class="btn btn-secondary" href="#contact">Get in Touch</a>
+            <a
+              class="btn btn-ghost"
+              href="https://github.com/JusticeBrains"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"></path>
+              </svg>
+              GitHub / JusticeBrains
+            </a>
+          </div>
+        </div>
+
+        <!-- Architectural Blueprint Card -->
+        <aside class="hero-blueprint" aria-label="Production backend architecture summary">
+          <div class="blueprint-header">
+            <span class="mono-label">BACKEND LIFECYCLE // PRODUCTION</span>
+            <span class="badge-telemetry">10K+ USERS</span>
+          </div>
+
+          <div
+            class="arch-diagram"
+            role="img"
+            aria-label="Diagram showing web frontends and third-party integrations routed through Nginx and Gunicorn on Docker and Linux to Django and Django REST Framework APIs with JWT, RBAC, and audit logs, backed by PostgreSQL with atomic transactions and an asynchronous Redis and Celery pipeline observed with Sentry and Pydantic Logfire."
+          >
+            <div class="arch-node">
+              <span class="arch-step">01</span>
+              <div>
+                <strong>Edge &amp; Container Runtime</strong>
+                <span>Nginx &rarr; Gunicorn &middot; Docker / Linux / DigitalOcean</span>
+              </div>
+            </div>
+            <div class="arch-connector" aria-hidden="true"></div>
+            <div class="arch-node">
+              <span class="arch-step">02</span>
+              <div>
+                <strong>Python REST APIs</strong>
+                <span>Django / DRF &middot; JWT, Pydantic, RBAC &amp; Audit Logs</span>
+              </div>
+            </div>
+            <div class="arch-split" aria-hidden="true">
+              <span></span>
+              <span></span>
+            </div>
+            <div class="arch-branches">
+              <div class="arch-node">
+                <span class="arch-step">03A</span>
+                <div>
+                  <strong>PostgreSQL</strong>
+                  <span>Atomic Txns &middot; &gt;80% Faster Endpoints</span>
+                </div>
+              </div>
+              <div class="arch-node">
+                <span class="arch-step">03B</span>
+                <div>
+                  <strong>Redis + Celery</strong>
+                  <span>Async Payroll &amp; Financial Reports</span>
+                </div>
+              </div>
+            </div>
+            <div class="arch-footer">
+              <span>Monitoring: Sentry &middot; Pydantic Logfire</span>
+              <span>Scale: 10+ Client Orgs</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Impact Metrics Strip -->
+      <div class="container">
+        <dl class="metrics-strip" aria-label="Key engineering metrics">
+          <div class="metric-item">
+            <dt>Enterprise Users</dt>
+            <dd>10,000+</dd>
+          </div>
+          <div class="metric-item">
+            <dt>Endpoint Latency Cut</dt>
+            <dd>&gt;80%</dd>
+          </div>
+          <div class="metric-item">
+            <dt>Client Organizations</dt>
+            <dd>10+</dd>
+          </div>
+          <div class="metric-item">
+            <dt>Backend Experience</dt>
+            <dd>3+ yrs</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 01. Core Capabilities -->
+    <section class="section" id="focus" aria-labelledby="focus-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-index">01 // CORE CAPABILITIES</span>
+          <h2 id="focus-heading">End-to-end backend ownership</h2>
+          <p class="section-intro">
+            From relational data modeling and API contracts to background job queues and production
+            Linux infrastructure, I build reliable systems for business-critical workflows.
+          </p>
+        </header>
+
+        <div class="card-grid capabilities-grid">
+          <article class="card reveal-card">
+            <span class="card-tag">01 &middot; APIs</span>
+            <h3>Python &amp; REST API Design</h3>
+            <p>
+              Designing maintainable Django and Django REST Framework APIs with JWT authentication
+              and Pydantic validation, collaborating closely with frontend engineers and product
+              teams on contracts and edge cases.
+            </p>
+          </article>
+
+          <article class="card reveal-card">
+            <span class="card-tag">02 &middot; Databases</span>
+            <h3>PostgreSQL Modeling &amp; Tuning</h3>
+            <p>
+              Structuring relational schemas for complex HR, payroll, lending, and reporting
+              domains, using SQL tuning and Django ORM refactoring to cut slow production endpoint
+              response times by over 80%.
+            </p>
+          </article>
+
+          <article class="card reveal-card">
+            <span class="card-tag">03 &middot; Queues</span>
+            <h3>Asynchronous Processing</h3>
+            <p>
+              Moving heavy payroll runs and financial report generation out of the HTTP request
+              cycle with Celery and Redis so core applications stay fast and dependable under load.
+            </p>
+          </article>
+
+          <article class="card reveal-card">
+            <span class="card-tag">04 &middot; Operations</span>
+            <h3>Linux Deployments &amp; Security</h3>
+            <p>
+              Operating containerized Docker, Nginx, and Gunicorn services on DigitalOcean,
+              monitoring with Sentry and Pydantic Logfire, and safeguarding sensitive financial data
+              with RBAC, atomic transactions, and audit logs.
+            </p>
+          </article>
+        </div>
+
+        <aside class="callout-strip">
+          <p>
+            <strong>Cross-Functional Delivery:</strong> Used to working directly with frontend
+            developers, product owners, and business teams to align on API contracts, debug edge
+            cases, and ship dependable releases.
+          </p>
+          <a class="btn btn-secondary btn-sm" href="#contact">Start a Conversation</a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 02. Professional Experience -->
+    <section class="section section-alt" id="experience" aria-labelledby="experience-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-index">02 // PROFESSIONAL EXPERIENCE</span>
+          <h2 id="experience-heading">Production engineering &amp; technical leadership</h2>
+        </header>
+
+        <div class="timeline">
+          <article class="timeline-card reveal-card">
+            <div class="timeline-meta">
+              <span class="mono-date">Feb 2023 &ndash; Present</span>
+              <span class="meta-location">Accra, Ghana</span>
+            </div>
+
+            <div class="timeline-body">
+              <div class="timeline-header">
+                <div>
+                  <h3>Software Engineer</h3>
+                  <p class="org-name">Faab Systems Ghana Ltd</p>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm"
+                  data-open-dialog="faab-dialog"
+                >
+                  Architecture Deep-Dive
+                </button>
+              </div>
+
+              <ul class="detail-list">
+                <li>
+                  Built and maintained enterprise HR and payroll systems used by
+                  <strong>10,000+ users</strong> across <strong>10+ client organizations</strong>.
+                </li>
+                <li>
+                  Designed REST APIs in <strong>Django</strong> and
+                  <strong>Django REST Framework</strong> for web frontends and third-party
+                  integrations, partnering with frontend engineers and product teams to agree on
+                  contracts and debug edge cases.
+                </li>
+                <li>
+                  Modeled <strong>PostgreSQL</strong> schemas for HR, payroll, lending, and
+                  reporting workflows; cut response times on slow production endpoints by
+                  <strong>over 80%</strong> through SQL tuning and Django ORM refactoring.
+                </li>
+                <li>
+                  Moved heavy payroll runs and financial report generation out of the request cycle
+                  using <strong>Celery</strong> and <strong>Redis</strong>, keeping the main
+                  application responsive under load.
+                </li>
+                <li>
+                  Managed containerized deployments on Linux and <strong>DigitalOcean</strong> with
+                  <strong>Docker</strong>, <strong>Nginx</strong>, and <strong>Gunicorn</strong>,
+                  stepping in to troubleshoot configuration bugs, database bottlenecks, and
+                  month-end traffic spikes.
+                </li>
+                <li>
+                  Protected sensitive employee and financial data with role-based access controls,
+                  atomic transactions, and audit logs; stripped hardcoded credentials out of legacy
+                  codebases.
+                </li>
+              </ul>
+
+              <ul class="tag-list" aria-label="Technologies used at Faab Systems Ghana Ltd">
+                <li>Python</li>
+                <li>Django</li>
+                <li>Django REST Framework</li>
+                <li>PostgreSQL</li>
+                <li>Celery</li>
+                <li>Redis</li>
+                <li>Docker</li>
+                <li>Nginx / Gunicorn</li>
+                <li>DigitalOcean</li>
+                <li>Sentry</li>
+                <li>Pydantic Logfire</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-card reveal-card">
+            <div class="timeline-meta">
+              <span class="mono-date">Sep 2022 &ndash; Dec 2022</span>
+              <span class="meta-location">Ghana</span>
+            </div>
+
+            <div class="timeline-body">
+              <div class="timeline-header">
+                <div>
+                  <h3>Technical Lead &amp; Software Trainer</h3>
+                  <p class="org-name">TEDHUB</p>
+                </div>
+              </div>
+
+              <ul class="detail-list">
+                <li>
+                  Wrote hands-on Python exercises and mentored junior developers on debugging, code
+                  quality, Git workflows, and working in a team.
+                </li>
+              </ul>
+
+              <ul class="tag-list" aria-label="Skills used at TEDHUB">
+                <li>Python</li>
+                <li>Debugging</li>
+                <li>Code Quality</li>
+                <li>Git Workflows</li>
+                <li>Mentorship</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-card reveal-card">
+            <div class="timeline-meta">
+              <span class="mono-date">2021 &ndash; Present</span>
+              <span class="meta-location">Independent</span>
+            </div>
+
+            <div class="timeline-body">
+              <div class="timeline-header">
+                <div>
+                  <h3>Software Engineer (Freelance)</h3>
+                  <p class="org-name">Independent Projects</p>
+                </div>
+              </div>
+
+              <ul class="detail-list">
+                <li>
+                  Built custom Python REST APIs and PostgreSQL schemas for client web applications,
+                  handling backend delivery and frontend integration end-to-end.
+                </li>
+              </ul>
+
+              <ul class="tag-list" aria-label="Technologies used in freelance work">
+                <li>Python</li>
+                <li>REST APIs</li>
+                <li>PostgreSQL</li>
+                <li>Schema Design</li>
+                <li>Frontend Integration</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. Technical Skills -->
+    <section class="section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-index">03 // TECHNICAL SKILLS</span>
+          <h2 id="skills-heading">Stack &amp; engineering toolkit</h2>
+        </header>
+
+        <div class="filter-bar" role="group" aria-label="Filter skills by category">
+          <button type="button" class="filter-btn" data-skill-filter="all" aria-pressed="true">
+            All Domains
+          </button>
+          <button type="button" class="filter-btn" data-skill-filter="backend" aria-pressed="false">
+            Backend &amp; APIs
+          </button>
+          <button type="button" class="filter-btn" data-skill-filter="data" aria-pressed="false">
+            Data &amp; Queues
+          </button>
+          <button type="button" class="filter-btn" data-skill-filter="infra" aria-pressed="false">
+            Infrastructure
+          </button>
+          <button type="button" class="filter-btn" data-skill-filter="testing" aria-pressed="false">
+            Testing &amp; Tooling
+          </button>
+        </div>
+
+        <div class="card-grid skills-grid" id="skills-grid">
+          <article class="card skill-card" data-category="backend">
+            <span class="card-tag">01</span>
+            <h3>Backend &amp; APIs</h3>
+            <ul class="skill-chips">
+              <li>Python</li>
+              <li>Django</li>
+              <li>Django REST Framework</li>
+              <li>REST</li>
+              <li>JWT</li>
+              <li>Pydantic</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card" data-category="data">
+            <span class="card-tag">02</span>
+            <h3>Data &amp; Queues</h3>
+            <ul class="skill-chips">
+              <li>SQL</li>
+              <li>PostgreSQL</li>
+              <li>Redis</li>
+              <li>Celery</li>
+              <li>Schema Design</li>
+              <li>Query Optimization</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card" data-category="infra">
+            <span class="card-tag">03</span>
+            <h3>Infrastructure</h3>
+            <ul class="skill-chips">
+              <li>Docker</li>
+              <li>Docker Compose</li>
+              <li>Linux</li>
+              <li>Nginx</li>
+              <li>Gunicorn</li>
+              <li>DigitalOcean</li>
+              <li>Sentry</li>
+              <li>Pydantic Logfire</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card" data-category="testing">
+            <span class="card-tag">04</span>
+            <h3>Testing &amp; Tooling</h3>
+            <ul class="skill-chips">
+              <li>pytest</li>
+              <li>Django Test Framework</li>
+              <li>Postman</li>
+              <li>Git</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. Education & Code -->
+    <section class="section section-alt" id="education" aria-labelledby="education-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-index">04 // EDUCATION &amp; CODE</span>
+          <h2 id="education-heading">Background &amp; repositories</h2>
+        </header>
+
+        <div class="two-col-grid">
+          <article class="card reveal-card">
+            <div class="edu-header">
+              <span class="card-tag">Education</span>
+              <span class="mono-date">2017 &ndash; 2021</span>
+            </div>
+            <h3>BSc Computer Science and Engineering</h3>
+            <p class="org-name">University of Mines and Technology</p>
+            <p>
+              Four-year degree in Computer Science and Engineering providing the systems,
+              algorithms, and database foundations behind my backend engineering work.
+            </p>
+          </article>
+
+          <article class="card project-card reveal-card">
+            <div class="project-top">
+              <span class="card-tag">GitHub Profile</span>
+              <span class="mono-pill">@JusticeBrains</span>
+            </div>
+            <h3>Open-Source &amp; Engineering Repositories</h3>
+            <p>
+              Browse my Python services, Django/DRF projects, database experiments, and backend
+              tooling directly on GitHub.
+            </p>
+            <div class="project-actions">
+              <a
+                class="btn btn-secondary btn-sm"
+                href="https://github.com/JusticeBrains"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit github.com/JusticeBrains &rarr;
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. Contact -->
+    <section class="section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-index">05 // CONTACT</span>
+          <h2 id="contact-heading">Let&rsquo;s work together</h2>
+          <p class="section-intro">
+            Open to backend engineering roles, API &amp; database architecture projects, and
+            technical collaborations.
+          </p>
+        </header>
+
+        <div class="contact-grid">
+          <div class="card contact-details">
+            <h3>Direct Channels</h3>
+            <dl class="contact-list">
+              <div class="contact-row">
+                <dt>Email</dt>
+                <dd class="contact-copy-wrap">
+                  <a href="mailto:justiceduodu@yahoo.com">justiceduodu@yahoo.com</a>
+                  <button
+                    type="button"
+                    class="btn btn-ghost btn-xs"
+                    id="copy-email-btn"
+                    data-copy="justiceduodu@yahoo.com"
+                  >
+                    Copy
+                  </button>
+                </dd>
+              </div>
+              <div class="contact-row">
+                <dt>Phone</dt>
+                <dd><a href="tel:+233543447358">+233 54 344 7358</a></dd>
+              </div>
+              <div class="contact-row">
+                <dt>GitHub</dt>
+                <dd>
+                  <a href="https://github.com/JusticeBrains" target="_blank" rel="noopener noreferrer">
+                    github.com/JusticeBrains
+                  </a>
+                </dd>
+              </div>
+              <div class="contact-row">
+                <dt>Location</dt>
+                <dd>Accra, Ghana</dd>
+              </div>
+            </dl>
+            <p class="sr-status" id="copy-status" role="status" aria-live="polite"></p>
+          </div>
+
+          <form class="card contact-form" id="contact-form">
+            <h3>Draft an Email</h3>
+            <p class="form-hint">
+              Opens your default email client pre-addressed to <code>justiceduodu@yahoo.com</code>.
+            </p>
+
+            <div class="field">
+              <label for="sender-name">Your Name</label>
+              <input
+                id="sender-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+                placeholder="Engineering Manager / Founder"
+              >
+            </div>
+
+            <div class="field">
+              <label for="message-topic">Subject</label>
+              <input
+                id="message-topic"
+                name="subject"
+                type="text"
+                required
+                placeholder="Backend Engineer Role / Project Inquiry"
+              >
+            </div>
+
+            <div class="field">
+              <label for="message-body">Message</label>
+              <textarea
+                id="message-body"
+                name="body"
+                rows="4"
+                required
+                placeholder="Share a quick note about the role, team, or backend problem you're solving..."
+              ></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Open Email Draft</button>
+              <button type="button" class="btn btn-secondary" data-open-dialog="cv-dialog">
+                Printable CV
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="current-year">2026</span> Justice Duodu. Accra, Ghana.</p>
+      <div class="footer-links">
+        <a href="https://github.com/JusticeBrains" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="mailto:justiceduodu@yahoo.com">Email</a>
+        <a href="#top">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal 1: Faab Systems Architecture Deep-Dive -->
+  <dialog id="faab-dialog" class="modal" closedby="any" aria-labelledby="faab-dialog-title">
+    <div class="modal-surface">
+      <header class="modal-header">
+        <div>
+          <span class="mono-label">PRODUCTION CASE STUDY // FAAB SYSTEMS GHANA LTD</span>
+          <h2 id="faab-dialog-title">Enterprise HR &amp; Payroll Backend</h2>
+        </div>
+        <button type="button" class="icon-btn" data-close-dialog aria-label="Close dialog">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12"></path>
+          </svg>
+        </button>
+      </header>
+
+      <div class="modal-body">
+        <p>
+          Enterprise HR and payroll backend services supporting <strong>10,000+ users</strong>
+          across <strong>10+ client organizations</strong>, spanning API contracts, database
+          performance, asynchronous jobs, and containerized production operations.
+        </p>
+
+        <div class="modal-section">
+          <h3>API Design &amp; Cross-Team Integration</h3>
+          <p>
+            Designed REST APIs in Django and Django REST Framework serving web frontends and
+            third-party integrations, working directly with frontend engineers and product teams to
+            define contracts and resolve edge cases.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h3>PostgreSQL Modeling &amp; Query Tuning (&gt;80% Faster)</h3>
+          <p>
+            Modeled relational PostgreSQL schemas for HR, payroll, lending, and reporting
+            workflows, cutting response times on slow production endpoints by over 80% via SQL
+            tuning and Django ORM refactoring.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h3>Background Jobs, Linux Operations &amp; Security</h3>
+          <p>
+            Offloaded heavy payroll runs and financial report generation out of the HTTP request
+            cycle with Celery and Redis. Managed Docker, Nginx, and Gunicorn deployments on Linux
+            and DigitalOcean (monitored with Sentry and Pydantic Logfire) to handle month-end
+            traffic spikes, while protecting sensitive employee and financial records through RBAC,
+            atomic transactions, audit logs, and removal of hardcoded credentials from legacy
+            codebases.
+          </p>
+        </div>
+      </div>
+
+      <footer class="modal-footer">
+        <button type="button" class="btn btn-primary" data-close-dialog>Close</button>
+      </footer>
+    </div>
+  </dialog>
+
+  <!-- Modal 2: Printable CV Summary -->
+  <dialog id="cv-dialog" class="modal modal-wide" closedby="any" aria-labelledby="cv-dialog-title">
+    <div class="modal-surface">
+      <header class="modal-header">
+        <div>
+          <span class="mono-label">CURRICULUM VITAE // QUICK VIEW</span>
+          <h2 id="cv-dialog-title">Justice Duodu &mdash; Backend Software Engineer</h2>
+        </div>
+        <button type="button" class="icon-btn" data-close-dialog aria-label="Close CV dialog">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12"></path>
+          </svg>
+        </button>
+      </header>
+
+      <div class="modal-body cv-sheet">
+        <p class="cv-contact-line">
+          Accra, Ghana &middot; +233 54 344 7358 &middot; justiceduodu@yahoo.com &middot;
+          github.com/JusticeBrains
+        </p>
+
+        <div class="modal-section">
+          <h3>Profile</h3>
+          <p>
+            Backend engineer with 3+ years of experience building Python APIs and database-heavy
+            systems for HR, payroll, and finance. Comfortable owning the full backend lifecycle,
+            from PostgreSQL schema design and query tuning to Celery background jobs and Docker
+            deployments on Linux. Used to working directly with frontend developers and business
+            teams to ship reliable software.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h3>Professional Experience</h3>
+          <ul class="detail-list">
+            <li>
+              <strong>Software Engineer</strong>, Faab Systems Ghana Ltd (Feb 2023 &ndash; Present)
+              &mdash; Enterprise HR and payroll systems for 10,000+ users across 10+ client
+              organizations; Django/DRF REST APIs; &gt;80% faster slow PostgreSQL endpoints via SQL
+              tuning &amp; ORM refactoring; Celery/Redis background jobs; Docker/Nginx/Gunicorn on
+              Linux &amp; DigitalOcean; RBAC, atomic transactions, audit logs, and legacy credential
+              cleanup.
+            </li>
+            <li>
+              <strong>Technical Lead &amp; Software Trainer</strong>, TEDHUB (Sep 2022 &ndash; Dec
+              2022) &mdash; Wrote hands-on Python exercises and mentored junior developers on
+              debugging, code quality, Git workflows, and teamwork.
+            </li>
+            <li>
+              <strong>Software Engineer (Freelance)</strong>, Independent Projects (2021 &ndash;
+              Present) &mdash; Built custom Python REST APIs and PostgreSQL schemas for client web
+              applications end-to-end.
+            </li>
+          </ul>
+        </div>
+
+        <div class="modal-section">
+          <h3>Technical Skills</h3>
+          <ul class="detail-list">
+            <li><strong>Backend &amp; APIs:</strong> Python, Django, Django REST Framework, REST, JWT, Pydantic</li>
+            <li><strong>Data &amp; Queues:</strong> SQL, PostgreSQL, Redis, Celery, Schema Design, Query Optimization</li>
+            <li><strong>Infrastructure:</strong> Docker, Docker Compose, Linux, Nginx, Gunicorn, DigitalOcean, Sentry, Pydantic Logfire</li>
+            <li><strong>Testing &amp; Tooling:</strong> pytest, Django Test Framework, Postman, Git</li>
+          </ul>
+        </div>
+
+        <div class="modal-section">
+          <h3>Education</h3>
+          <p>
+            <strong>BSc Computer Science and Engineering</strong>, University of Mines and
+            Technology (2017 &ndash; 2021)
+          </p>
+        </div>
+      </div>
+
+      <footer class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="print-cv-btn">
+          Print / Save PDF
+        </button>
+        <button type="button" class="btn btn-primary" data-close-dialog>Close</button>
+      </footer>
+    </div>
+  </dialog>
+</body>
+</html>
